@@ -58,5 +58,5 @@ VLAN 88 (Management)       VLAN 30 (Home)
 - CCNA — Course completed | Exam: November 2026
 
 ## Contact
-- LinkedIn: linkedin.com/in/ali-a-112903225
+- LinkedIn: https://www.linkedin.com/in/ali-a-112903225
 - Email: ahmadmahmudali1@gmail.com
