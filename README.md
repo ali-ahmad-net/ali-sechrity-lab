@@ -8,11 +8,14 @@ simulating a corporate network environment with perimeter security,
 multi-VLAN segmentation, centralized SIEM monitoring, and Active Directory.
 
 ## Architecture
+```
 Internet → Check Point 1570 → Cisco 2960 Switch → Dell Server (ESXi)
-│┌───────────────────────────┤
-│                           │
-VLAN 10 (Servers)          VLAN 20 (Clients)
-VLAN 88 (Management)       VLAN 30 (Home)
+                                                          │
+                              ┌───────────────────────────┤
+                              │                           │
+                         VLAN 10 (Servers)          VLAN 20 (Clients)
+                         VLAN 88 (Management)       VLAN 30 (Home)
+```
 
 ## Technologies
 | Component      | Technology              | Purpose                        |
@@ -25,15 +28,11 @@ VLAN 88 (Management)       VLAN 30 (Home)
 | IDS (Phase B)  | Suricata                | Network Threat Detection       |
 
 ## Key Implementations
-- ✅ Check Point 1570: Security Policy (Stealth, Cleanup, Blacklist),
-  NAT, IPSec/SSL VPN, NTP, Syslog → Wazuh
-- ✅ Cisco 2960: VLANs, 802.1Q Trunking, DHCP Snooping,
-  Port Security, RSTP + BPDUGuard
+- ✅ Check Point 1570: Security Policy (Stealth, Cleanup, Blacklist), NAT, IPSec/SSL VPN, NTP, Syslog → Wazuh
+- ✅ Cisco 2960: VLANs, 802.1Q Trunking, DHCP Snooping, Port Security, RSTP + BPDUGuard
 - ✅ VMware ESXi: 4 vSwitches — VLAN 10/20/88 + isolated SPAN for IDS
-- ✅ Wazuh SIEM v4.14: 3 active agents + 3 syslog sources
-  (Check Point, Cisco, ESXi)
-- ✅ Windows Server 2025: AD DS (domain), DNS, DHCP,
-  OUs, GPO Security Baseline, Audit Policy
+- ✅ Wazuh SIEM v4.14: 3 active agents + 3 syslog sources (Check Point, Cisco, ESXi)
+- ✅ Windows Server 2025: AD DS, DNS, DHCP, OUs, GPO Security Baseline, Audit Policy
 - ✅ Domain-joined Windows 10 client with user/admin accounts
 
 ## Lab Phases
@@ -58,5 +57,5 @@ VLAN 88 (Management)       VLAN 30 (Home)
 - CCNA — Course completed | Exam: November 2026
 
 ## Contact
-- LinkedIn: https://www.linkedin.com/in/ali-a-112903225
-- Email: ahmadmahmudali1@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ali-ahmad-mahmud-112903225
+- Email: ahmadmahmudali1@gmail.com 
